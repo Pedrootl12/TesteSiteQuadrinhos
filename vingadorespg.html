@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Site Quadrinhos</title>
+</head>
+
+<body>
+    <!--Inicio do nav-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3">
+        <a href="index.html" class="navbar-brand">Home aquelas coisa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Fim do nav-->
+    <a class="text-start h5" href="blog.html">
+        < Voltar</a>
+            <div class="container-fluid">
+                <div class="card p-3 m-3">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="text-center">Quadrinhos de Dezembro/2023</h1>
+                            <div class="media p-3">
+                                <img src="Imagens/vingadores.png" class="mr-2" id="capas">
+                                <div class="media-body align-self-center">
+                                    <h3 class="font-weight-bolder">Vingadores Sem Limites</h3>
+                                    <p class="bg-warning rounded-sm">Pré-venda com previsão de envio para 2ª quinzena de
+                                        Dez/23.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row bg-secondary rounded-lg p-3">
+                            <div class="col">
+                                <div class="font-weight-bold h4">Detalhes</div>
+                                <div class="font-italic">Um ataque alienígena, uma cidade distorcida, e uma Capitã
+                                    Marvel
+                                    com intenções nada amigáveis perante os Vingadores! Em seguida, os Vingadores
+                                    acorrentados, com sua única esperança nas mãos de seu maior herói: Doutor Destino?!
+                                    Um
+                                    exército de Caveiras Vermelhas ameaça sobrepujá-los, um grupo de assassinos com sede
+                                    de
+                                    sangue vai caçá-los, e até mesmo o Homem-Aranha está atrás dos Heróis Mais Poderosos
+                                    da
+                                    Terra! Mas quem está por trás de toda essa loucura, alterando o tecido da realidade
+                                    vez
+                                    após vez? Algo grande está vindo, e as consequências vão ser inacreditáveis!</div>
+                                <hr>
+                                <dl class="row">
+                                    <dt class="col-sm-2">Seguimento:</dt>
+                                    <dd class="col-sm-10">Comics</dd>
+                                </dl>
+                                <dl class="row">
+                                    <dt class="col-sm-2">Marca:</dt>
+                                    <dd class="col-sm-10">Marvel</dd>
+                                </dl>
+                                <dl class="row">
+                                    <dt class="col-sm-2">Autor(es):</dt>
+                                    <dd class="col-sm-10">Derek Landy, Greg Land</dd>
+                                </dl>
+                                <dl class="row">
+                                    <dt class="col-sm-2">Número de páginas:</dt>
+                                    <dd class="col-sm-10">120</dd>
+                                </dl>
+                                <!--Praticamente o Inicio do modal-->
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#myModal">Inscrever-se na Pré Venda</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="myModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Você esta cadastrado(a)!</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <span class="font-italic">Insira aqui o email que você prefere receber nossa
+                                notificação.</span>
+                            <div class="form">
+                                <div class="form-group">
+                                    <label for="emailIns"></label>
+                                    <input type="email" class="form-control" id="emailIns" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fim do modal-->
+            <footer class="py-4 bg-dark text-white">
+                <div class="container-fluid text-center">
+                    <small>Copyright &copy;  Github - @Pedrootl12 </small>
+                </div>
+            </footer>
+            <!--Inicio do Codigo para mudar a cor do botão-->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script>
+                $('#myModal').on('show.bs.modal', function () {
+                    $('.btn-primary').removeClass('btn-primary').addClass('btn-warning');
+                });
+                $('#myModal').on('hidden.bs.modal', function () {
+                    $('.btn-warning').removeClass('btn-warning').addClass('btn-success');
+                });
+            </script>
+            <!--Fim do Codigo para mudar a cor do botão-->
+
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+                crossorigin="anonymous"></script>
+
+</body>
+
+</html>
